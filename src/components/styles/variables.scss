@@ -1,0 +1,47 @@
+// Peaceful Color Palette
+$sky-blue: hsl(200, 85%, 75%);
+$lavender: hsl(270, 95%, 87%);
+$soft-white: hsl(0, 0%, 99%);
+$mist-gray: hsl(220, 15%, 96%);
+$gold: hsl(45, 95%, 58%);
+$text-primary: hsl(220, 15%, 25%);
+$text-muted: hsl(220, 12%, 55%);
+
+// Gradients
+$gradient-sky: linear-gradient(135deg, $sky-blue 0%, $lavender 100%);
+$gradient-peaceful: linear-gradient(180deg, white 0%, hsl(200, 85%, 95%) 100%);
+$gradient-hero: linear-gradient(135deg, rgba($sky-blue, 0.9) 0%, rgba($lavender, 0.9) 100%);
+
+// Shadows and Glows
+$shadow-peaceful: 0 10px 40px -10px rgba($sky-blue, 0.3);
+$shadow-card: 0 4px 20px rgba($sky-blue, 0.15);
+$glow-lavender: 0 0 30px rgba($lavender, 0.4);
+$glow-gold: 0 0 20px rgba($gold, 0.5);
+
+// Typography
+$font-heading: 'Poppins', sans-serif;
+$font-body: 'Nunito', sans-serif;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+
+// Border Radius
+$radius-sm: 0.5rem;
+$radius-md: 1rem;
+$radius-lg: 1.5rem;
+$radius-full: 9999px;
+
+// Transitions
+$transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.2s ease;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;

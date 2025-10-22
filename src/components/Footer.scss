@@ -1,0 +1,32 @@
+@import './styles/variables';
+
+.footer {
+  background: linear-gradient(135deg, rgba($sky-blue, 0.1) 0%, rgba($lavender, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  padding: $spacing-xl $spacing-lg;
+  text-align: center;
+  border-top: 1px solid rgba($sky-blue, 0.2);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__quote {
+    font-size: 1.2rem;
+    color: $text-primary;
+    font-style: italic;
+    margin-bottom: $spacing-md;
+    line-height: 1.8;
+  }
+
+  &__quote-author {
+    font-weight: 700;
+    color: hsl(var(--primary));
+  }
+
+  &__copyright {
+    font-size: 0.95rem;
+    color: $text-muted;
+  }
+}

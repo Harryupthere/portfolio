@@ -1,0 +1,201 @@
+@import './styles/variables';
+
+.contact {
+  position: relative;
+  padding: $spacing-2xl $spacing-lg;
+  background: $gradient-peaceful;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &__clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Cpath fill='%23ffffff' fill-opacity='0.2' d='M0 100 Q50 50 100 100 T200 100 T300 100 T400 100 L400 200 L0 200 Z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='250'%3E%3Cpath fill='%23ffffff' fill-opacity='0.15' d='M0 150 Q75 75 150 150 T300 150 T450 150 T500 150 L500 250 L0 250 Z'/%3E%3C/svg%3E");
+    background-position: 0 0, 200px 100px;
+    background-repeat: repeat-x;
+    animation: cloud-float 60s linear infinite;
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: $text-muted;
+    font-style: italic;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-2xl;
+    align-items: start;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__social {
+    background: white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-card;
+  }
+
+  &__social-title {
+    font-size: 1.8rem;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+    font-weight: 600;
+  }
+
+  &__social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-md;
+    background: white;
+    border: 2px solid $mist-gray;
+    border-radius: $radius-md;
+    color: $text-primary;
+    text-decoration: none;
+    font-weight: 600;
+    transition: $transition-smooth;
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--hover-color);
+      color: var(--hover-color);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    svg {
+      transition: $transition-smooth;
+    }
+
+    &:hover svg {
+      transform: scale(1.1);
+    }
+  }
+
+  &__form-container {
+    background: white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-card;
+  }
+
+  &__form-title {
+    font-size: 1.8rem;
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+    font-weight: 600;
+  }
+
+  &__form-group {
+    margin-bottom: $spacing-lg;
+
+    label {
+      display: block;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $text-primary;
+      margin-bottom: $spacing-xs;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: $spacing-md;
+      border: 2px solid $mist-gray;
+      border-radius: $radius-md;
+      font-size: 1rem;
+      font-family: $font-body;
+      color: $text-primary;
+      transition: $transition-smooth;
+
+      &:focus {
+        outline: none;
+        border-color: hsl(var(--primary));
+        box-shadow: 0 0 0 3px rgba($sky-blue, 0.1);
+      }
+
+      &::placeholder {
+        color: $text-muted;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+
+  &__form-submit {
+    width: 100%;
+    padding: $spacing-md $spacing-lg;
+    background: $gradient-sky;
+    color: white;
+    border: none;
+    border-radius: $radius-full;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    transition: $transition-smooth;
+    box-shadow: $shadow-peaceful;
+    font-family: $font-heading;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $glow-lavender, $shadow-peaceful;
+    }
+  }
+}
+
+@keyframes cloud-float {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}

@@ -1,0 +1,133 @@
+@import './styles/variables';
+
+.about {
+  padding: $spacing-2xl $spacing-lg;
+  background: $gradient-peaceful;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: $text-muted;
+    font-style: italic;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    align-items: center;
+    margin-bottom: $spacing-2xl;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    padding: $spacing-lg;
+  }
+
+  &__bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: $text-primary;
+    margin-bottom: $spacing-md;
+
+    strong {
+      color: hsl(var(--primary));
+      font-weight: 600;
+    }
+  }
+
+  &__resume-btn {
+    margin-top: $spacing-lg;
+    padding: $spacing-md $spacing-lg;
+    background: $gradient-sky;
+    color: white;
+    border: none;
+    border-radius: $radius-full;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    transition: $transition-smooth;
+    box-shadow: $shadow-peaceful;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: $glow-lavender, $shadow-peaceful;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: $radius-lg;
+      box-shadow: $shadow-card;
+      animation: float 8s ease-in-out infinite;
+    }
+  }
+
+  &__skills {
+    background: white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-card;
+  }
+
+  &__skills-title {
+    font-size: 1.8rem;
+    color: $text-primary;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    justify-content: center;
+  }
+
+  &__skill-chip {
+    padding: $spacing-xs $spacing-md;
+    background: $gradient-sky;
+    color: white;
+    border-radius: $radius-full;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: $transition-smooth;
+    box-shadow: 0 2px 10px rgba($sky-blue, 0.2);
+
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: $glow-lavender;
+    }
+  }
+}
