@@ -7,6 +7,19 @@ import { ExternalLink, Github, X } from 'lucide-react';
 import project1 from '@/assets/project1.jpg';
 import project2 from '@/assets/project2.jpg';
 import project3 from '@/assets/project3.jpg';
+
+import projectImage1 from '@/assets/projectImage1.png';
+import projectImage2 from '@/assets/projectImage2.png';
+import projectImage3 from '@/assets/projectImage3.png';
+import projectImage4 from '@/assets/projectImage4.png';
+import projectImage5 from '@/assets/projectImage5.png';
+import projectImage6 from '@/assets/projectImage6.png';
+import projectImage7 from '@/assets/projectImage7.png';
+import projectImage8 from '@/assets/projectImage8.png';
+import projectImage9 from '@/assets/projectImage9.png';
+import projectImage10 from '@/assets/projectImage10.png';
+import projectImage11 from '@/assets/projectImage11.png';
+import adminPanelImage from '@/assets/adminPanelImage.png';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -15,33 +28,138 @@ import './Projects.scss';
 Modal.setAppElement('#root');
 
 const projects = [
+
   {
     id: 1,
-    title: 'DeFi Lending Platform',
-    description: 'A decentralized lending and borrowing platform built with Solidity and React. Features include collateralized loans, interest rate calculations, and automated liquidations.',
-    image: project1,
-    techStack: ['Solidity', 'React', 'Web3.js', 'Hardhat', 'IPFS'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'Art Fungible – NFT Marketplace',
+    description:
+      'A premium multi-chain NFT marketplace where top artists mint and sell digital artwork on Ethereum and Base. Features include wallet connectivity, lazy minting, secure NFT transfers, royalty automation, and IPFS storage. Art Fungible also offers a unique feature where buyers receive physical artwork linked to their NFTs. With optimized Web3 interactions and artist dashboards, the platform delivers a smooth minting and trading experience for both creators and collectors.',
+    image: projectImage1,
+    techStack: ['Solidity', 'Next.js', 'Web3.js', 'IPFS', 'Base', 'Ethereum'],
+    github: '',
+    demo: 'https://artfungible.io/',
   },
+
   {
     id: 2,
-    title: 'Smart Contract Auditor',
-    description: 'An automated tool for analyzing smart contracts, detecting vulnerabilities, and providing security recommendations for Web3 projects.',
-    image: project2,
-    techStack: ['Node.js', 'Solidity', 'TypeScript', 'Express', 'MongoDB'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'Mr Mint – ICO & Walk-to-Earn Ecosystem',
+    description:
+      'Mr Mint is a feature-rich ICO platform built on BSC with multiple utilities including Walk & Earn, NFT systems, gaming modules, and rewards. Users can buy $MNT tokens using Web3 wallet connectivity, track vesting, and participate in reward programs. The platform includes automated distribution, referral logic, dynamic pricing, and real-time purchase tracking. It bridges fitness and blockchain by rewarding physical steps with token benefits.',
+    image: projectImage2,
+    techStack: ['Solidity', 'React', 'Web3.js', 'BSC', 'Node.js'],
+    github: '',
+    demo: 'https://www.mrmint.io/',
   },
+
   {
     id: 3,
-    title: 'NFT Marketplace',
-    description: 'A full-featured NFT marketplace with minting, trading, and auction capabilities. Integrated with IPFS for decentralized storage.',
-    image: project3,
-    techStack: ['React', 'Solidity', 'Ethers.js', 'Next.js', 'Tailwind CSS'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'Equalizer Exchange – DEX & Governance',
+    description:
+      'A decentralized exchange offering swapping, liquidity pools, governance voting, and bribe mechanics. Users can connect wallets, trade tokens, stake, and participate in protocol-level decision-making. The platform supports live token pricing, auto-routing for optimized swaps, automatic contract calls, and secure smart-contract interactions. Equalizer Exchange delivers a complete DeFi experience with AMM mechanics and community-driven governance.',
+    image: projectImage3,
+    techStack: ['Solidity', 'React', 'Web3.js', 'DEX', 'AMM'],
+    github: '',
+    demo: 'https://equalizer.exchange/',
   },
+
+  {
+    id: 4,
+    title: 'Mr Mint Mystery Box – NFT Mining Game',
+    description:
+      'A gamified NFT platform where users purchase mystery boxes containing computer-part NFTs. When a user completes a full system, they can start mining MNT tokens through automated smart contracts. The platform includes randomized NFT reveals, wallet connectivity, reward dashboards, mining stats, and NFT inventory tracking. Mystery Box merges gaming with real token utility through blockchain-powered randomness and mining mechanisms.',
+    image: projectImage4,
+    techStack: ['Solidity', 'React', 'Web3.js', 'BSC', 'IPFS'],
+    github: '',
+    demo: 'https://nft.mrmint.io/',
+  },
+
+  {
+    id: 5,
+    title: 'Bidex NFT – Marketplace with Lazy Minting',
+    description:
+      'A modern NFT marketplace built around lazy minting, enabling creators to mint NFTs only when a purchase is made. Features include wallet connectivity, creator dashboards, automated royalty tracking, bidding, and optimized buying/selling flows. With secure smart contracts and gas-efficient mechanics, Bidex NFT offers a scalable and friendly environment for trading digital assets.',
+    image: projectImage5,
+    techStack: ['Solidity', 'Next.js', 'Web3.js', 'IPFS'],
+    github: '',
+    demo: 'https://www.bidexnft.io/',
+  },
+
+  {
+    id: 6,
+    title: 'Ponzu3 – Token Swap ICO',
+    description:
+      'Ponzu3 is a simple and intuitive ICO swap interface where users can exchange supported cryptocurrencies for Ponzu tokens. The system features wallet integration, automated token approvals, real-time conversion calculations, transaction verification, and secure purchase flow. Designed with a focus on speed and simplicity, Ponzu3 offers a clean user experience powered by accurate Web3 interaction.',
+    image: projectImage6,
+    techStack: ['Solidity', 'React', 'Web3.js'],
+    github: '',
+    demo: 'https://ponzu3-eta.vercel.app/',
+  },
+
+  {
+    id: 7,
+    title: 'Tito Token – ICO & Token Locking',
+    description:
+      'Tito Token is an ICO platform where users can buy and lock tokens for a selected duration to earn boosted returns. The app supports multi-token purchasing, wallet connectivity, smart-contract–driven locking logic, vesting timers, and real-time pricing. Users can choose lock periods, complete purchases, and track their locked tokens through an intuitive dashboard.',
+    image: projectImage7,
+    techStack: ['Solidity', 'React', 'Web3.js', 'BSC'],
+    github: '',
+    demo: 'https://tito-token.vercel.app/',
+  },
+
+  {
+    id: 8,
+    title: 'UNI Meta – Decentralized Communication System',
+    description:
+      'UNI Meta is a decentralized communication platform that uses wallet-based identity instead of traditional logins. It features secure messaging, MLM structure logic, real-time updates, and a mobile-first interface. With Web3 authentication, automated smart-contract actions, and responsive UI components, UNI Meta redefines communication through blockchain-powered verification.',
+    image: projectImage8,
+    techStack: ['Solidity', 'React', 'Web3.js', 'Node.js'],
+    github: '',
+    demo: 'https://akram-mlm.vercel.app/',
+  },
+
+  {
+    id: 9,
+    title: 'Read Riches – Stock Learning Platform',
+    description:
+      'Read Riches is a stock market learning platform where admins can upload and update detailed study content on Indian stocks. Users can explore strategies, chart patterns, market indicators, and analysis summaries. The platform includes structured lessons, searchable content, chart references, and a clean UI designed to help beginners understand the stock market easily.',
+    image: projectImage9,
+    techStack: ['Next.js', 'Node.js', 'MongoDB'],
+    github: '',
+    demo: 'https://www.readriches.com/',
+  },
+
+  {
+    id: 10,
+    title: 'AurumFX – Live Forex Pricing Dashboard',
+    description:
+      'AurumFX is a single-page forex dashboard showing live currency pricing, market trends, and quick predictions. Built with fast and lightweight components, it delivers real-time updates in a clean tabular format. Users can instantly track major forex pairs and monitor short-term movements with a simple, responsive UI designed for quick access.',
+    image: projectImage10,
+    techStack: ['Next.js', 'API Integration', 'Node.js'],
+    github: '',
+    demo: 'https://aurum-fx-one.vercel.app/',
+  },
+
+  {
+    id: 11,
+    title: 'Laxmi Coin – Astrology Token Utility',
+    description:
+      'Laxmi Coin is a utility token platform where users can purchase tokens and use them to book astrologer consultations. The platform integrates wallet connectivity, smart-contract–based transactions, automated booking logic, and a smooth token-purchase flow. It connects traditional astrology services with blockchain transparency and tokenized payments.',
+    image: projectImage11,
+    techStack: ['Solidity', 'React', 'Web3.js', 'BSC'],
+    github: '',
+    demo: 'https://laxmicoin.com/',
+  },
+  {
+  id: 12,
+  title: 'Universal Admin Panel – Full Project Control Dashboard',
+  description:
+    'A fully controlled, multi-module admin panel built to manage every blockchain project from a single dashboard. This panel includes user management, KYC verification, NFT & token monitoring, ICO controls, transaction tracking, wallet activity, and real-time analytics. Admins can update homepage content, manage collections, modify token prices, trigger airdrops, approve withdrawals, and control project settings with secure role-based access. The dashboard is integrated with Web3 for direct contract actions, live data fetching, automated updates, and error logging. Designed with clean UI/UX, fast performance, and a scalable structure supporting multiple projects like NFT marketplaces, ICO platforms, DEX systems, and mining dashboards.',
+  image: adminPanelImage,
+  techStack: ['Next.js', 'Node.js', 'MongoDB', 'Web3.js', 'Solidity', 'AdminLTE / Custom UI'],
+  github: '',
+  demo: '',
+}
+
 ];
 
 const Projects = () => {

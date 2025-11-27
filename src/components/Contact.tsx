@@ -15,13 +15,13 @@ import './Contact.scss';
 
 const socialLinks = [
   { name: 'YouTube', icon: Youtube, url: 'https://youtube.com', color: '#FF0000' },
-  { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com', color: '#0077B5' },
-  { name: 'GitHub', icon: Github, url: 'https://github.com', color: '#181717' },
-  { name: 'Fiverr', icon: Briefcase, url: 'https://fiverr.com', color: '#1DBF73' },
-  { name: 'Freelancer', icon: Globe, url: 'https://freelancer.com', color: '#29B2FE' },
-  { name: 'Upwork', icon: Briefcase, url: 'https://upwork.com', color: '#6FDA44' },
-  { name: 'PeoplePerHour', icon: Clock, url: 'https://peopleperhour.com', color: '#FF6B00' },
-  { name: 'LeetCode', icon: Code, url: 'https://leetcode.com', color: '#FFA116' },
+  { name: 'LinkedIn', icon: Linkedin, url: 'http://linkedin.com/in/harsh-chouhan-010/', color: '#0077B5' },
+  { name: 'GitHub', icon: Github, url: 'https://github.com/Harryupthere', color: '#181717' },
+  { name: 'Fiverr', icon: Briefcase, url: 'https://www.fiverr.com/harshchouhan001/', color: '#1DBF73' },
+  { name: 'Freelancer', icon: Globe, url: 'https://www.freelancer.in/u/Harsh01119?sb=t', color: '#29B2FE' },
+  // { name: 'Upwork', icon: Briefcase, url: 'https://upwork.com', color: '#6FDA44' },
+  // { name: 'PeoplePerHour', icon: Clock, url: 'https://peopleperhour.com', color: '#FF6B00' },
+  // { name: 'LeetCode', icon: Code, url: 'https://leetcode.com', color: '#FFA116' },
 ];
 
 const Contact = () => {

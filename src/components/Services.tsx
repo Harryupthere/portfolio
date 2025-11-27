@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Code2, Blocks, Lightbulb, Globe } from 'lucide-react';
+import { Database,Palette } from "lucide-react";
+
 import './Services.scss';
 
 const services = [
@@ -22,6 +24,16 @@ const services = [
     icon: Code2,
     title: 'Frontend Development',
     description: 'Beautiful, responsive interfaces built with React, TypeScript, and modern web technologies.',
+  },
+   {
+    icon: Database, // You can replace with a more suitable icon if available
+    title: 'Backend Development',
+    description: 'Robust backend solutions using Node.js and NestJS, with seamless database integration and scalable APIs.',
+  },
+  {
+    icon: Palette, // You can replace with a design-related icon if available
+    title: 'Figma Designing',
+    description: 'Modern UI/UX design in Figma, delivering intuitive and visually appealing prototypes for web and mobile.',
   },
 ];
 
