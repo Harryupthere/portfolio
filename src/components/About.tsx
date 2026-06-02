@@ -1,12 +1,109 @@
-import { motion } from 'framer-motion';
-import meditationImage from '@/assets/meditation.jpg';
-import { FileDown } from 'lucide-react';
-import './About.scss';
+import { motion } from "framer-motion";
+import meditationImage from "@/assets/meditation.jpg";
+import { FileDown } from "lucide-react";
+import "./About.scss";
 
 const skills = [
-  'React', 'Solidity', 'Web3.js', 'Ethers.js', 'Node.js', 'Express',
-  'MongoDB', 'TypeScript', 'Smart Contracts', 'DApp Development',
-  'Blockchain Architecture', 'IPFS', 'Hardhat', 'Truffle'
+  // Frontend
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "SCSS",
+  "Bootstrap",
+  "Tailwind CSS",
+
+  // Backend
+  "Node.js",
+  "Express.js",
+  "NestJS",
+  "REST APIs",
+  "JWT Authentication",
+
+  // Databases & Caching
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+  "Redis",
+
+  // Blockchain
+  "Solidity",
+  "Web3.js",
+  "Ethers.js",
+  "Smart Contracts",
+  "DApp Development",
+  "Blockchain Architecture",
+  "Token Development",
+  "ERC-20",
+  "ERC-721",
+  "ERC-1155",
+  "NFT Marketplaces",
+  "ICO Development",
+  "Staking Protocols",
+  "Vesting Contracts",
+  "Multisig Wallets",
+  "DeFi Protocols",
+  "DAO Development",
+  "Gas Optimization",
+  "Smart Contract Auditing",
+  "Upgradeable Contracts",
+  "OpenZeppelin",
+
+  // Blockchain Tools
+  "Hardhat",
+  "Foundry",
+  "Truffle",
+  "Remix IDE",
+  "Ganache",
+  "IPFS",
+  "Pinata",
+
+  // Networks
+  "Ethereum",
+  "Base",
+  "Polygon",
+  "BNB Chain",
+  "Arbitrum",
+  "Optimism",
+
+  // Payments
+  "Stripe",
+  "Razorpay",
+  "CoinPayments",
+  "Crypto Payment Integration",
+
+  // Queues & Real-Time
+  "BullMQ",
+  "RabbitMQ",
+  "Socket.IO",
+  "WebSockets",
+
+  // Cloud & DevOps
+  "AWS",
+  "CloudFront",
+  "S3",
+  "Nginx",
+  "PM2",
+  "Docker",
+  "Linux",
+
+  // Version Control
+  "Git",
+  "GitHub",
+  "GitLab",
+
+  // Testing
+  "Mocha",
+  "Chai",
+  "Jest",
+
+  // Security
+  "Smart Contract Security",
+  "Reentrancy Protection",
+  "Access Control",
+  "OWASP Security Practices"
 ];
 
 const About = () => {
@@ -33,23 +130,32 @@ const About = () => {
             className="about__text"
           >
             <p className="about__bio">
-              Hi, I'm <strong>Harsh Chouhan</strong>, also known as <strong>Harry</strong>.
-              I'm a blockchain developer who believes in building the future with calmness and clarity.
+              Hi, I'm <strong>Harsh Chouhan</strong>, also known as{" "}
+              <strong>Harry</strong>. I'm a blockchain developer who believes in
+              building the future with calmness and clarity.
             </p>
             <p className="about__bio">
-              My journey in Web3 is guided by purpose — creating decentralized solutions that
-              empower users and bring transparency to the digital world. I blend technical expertise
-              with a peaceful mindset, ensuring every line of code serves a greater purpose.
+              My journey in Web3 is guided by purpose — creating decentralized
+              solutions that empower users and bring transparency to the digital
+              world. I blend technical expertise with a peaceful mindset,
+              ensuring every line of code serves a greater purpose.
             </p>
             <p className="about__bio">
-              When I'm not coding smart contracts or building DApps, you'll find me exploring
-              spiritual practices, meditation, and finding inspiration in the clouds above.
+              When I'm not coding smart contracts or building DApps, you'll find
+              me exploring spiritual practices, meditation, and finding
+              inspiration in the clouds above.
             </p>
 
-            <button className="about__resume-btn">
+            {/* <button className="about__resume-btn"> */}
+            <a
+              href="/Harsh-Chouhan-Resume.pdf"
+              download="Harsh-Chouhan-Resume.pdf"
+              className="about__resume-btn"
+            >
               <FileDown size={20} />
               Download Resume
-            </button>
+            </a>
+            {/* </button> */}
           </motion.div>
 
           <motion.div

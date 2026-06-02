@@ -20,6 +20,9 @@ import projectImage9 from '@/assets/projectImage9.png';
 import projectImage10 from '@/assets/projectImage10.png';
 import projectImage11 from '@/assets/projectImage11.png';
 import adminPanelImage from '@/assets/adminPanelImage.png';
+import aztechreward from '@/assets/aztechreward.png';
+import tradlive from '@/assets/tradelive.png';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -151,6 +154,26 @@ const projects = [
   },
   {
   id: 12,
+  title: 'AZTech Rewards - All in one platform to educate yourself about anything you want and earn rewards',
+  description:
+    'AZTech Rewards is an educational platform where users can learn about various topics and earn rewards for their progress. The platform features interactive courses, quizzes, and a reward system that incentivizes learning. Users can track their progress, earn points, and redeem them for rewards, creating a fun and engaging learning experience.',
+  image: aztechreward,
+  techStack: ['Node.js', 'React.js', 'MySQL', 'ChatGPT api','Stripe','BoomFy','Redis', 'AdminLTE / Custom UI'],
+  github: '',
+  demo: 'http://aztechreward.com/',
+},
+  {
+  id: 13,
+  title: 'TradeLive24 – Fiat trading edu platform',
+  description:
+    'TradeLive24 is an educational platform focused on live trading of fiat currencies. It offers real-time market data, interactive charts, and educational content to help users learn about forex trading. The platform includes features like live price tracking, strategy guides, and a user-friendly interface designed to make learning about forex markets accessible and engaging.',
+  image: tradlive,
+  techStack: ['Nest.js', 'React.js', 'MySQL', 'ChatGPT api','Stripe', 'AdminLTE / Custom UI'],
+  github: '',
+  demo: 'https://www.tradelive24.com/',
+},
+ {
+  id: 14,
   title: 'Universal Admin Panel – Full Project Control Dashboard',
   description:
     'A fully controlled, multi-module admin panel built to manage every blockchain project from a single dashboard. This panel includes user management, KYC verification, NFT & token monitoring, ICO controls, transaction tracking, wallet activity, and real-time analytics. Admins can update homepage content, manage collections, modify token prices, trigger airdrops, approve withdrawals, and control project settings with secure role-based access. The dashboard is integrated with Web3 for direct contract actions, live data fetching, automated updates, and error logging. Designed with clean UI/UX, fast performance, and a scalable structure supporting multiple projects like NFT marketplaces, ICO platforms, DEX systems, and mining dashboards.',
@@ -159,6 +182,7 @@ const projects = [
   github: '',
   demo: '',
 }
+
 
 ];
 

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Youtube,
   Linkedin,
@@ -9,29 +9,48 @@ import {
   Briefcase,
   Clock,
   Code,
-} from 'lucide-react';
-import { toast } from 'sonner';
-import './Contact.scss';
+} from "lucide-react";
+import { toast } from "sonner";
+import "./Contact.scss";
+import emailjs from "@emailjs/browser";
 
 const socialLinks = [
-  { name: 'YouTube', icon: Youtube, url: 'https://youtube.com', color: '#FF0000' },
-  { name: 'LinkedIn', icon: Linkedin, url: 'http://linkedin.com/in/harsh-chouhan-010/', color: '#0077B5' },
-  { name: 'GitHub', icon: Github, url: 'https://github.com/Harryupthere', color: '#181717' },
-  { name: 'Fiverr', icon: Briefcase, url: 'https://www.fiverr.com/harshchouhan001/', color: '#1DBF73' },
-  { name: 'Freelancer', icon: Globe, url: 'https://www.freelancer.in/u/Harsh01119?sb=t', color: '#29B2FE' },
+  {
+    name: "YouTube",
+    icon: Youtube,
+    url: "https://www.youtube.com/@hashingwithharsh",
+    color: "#FF0000",
+  },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    url: "http://linkedin.com/in/harsh-chouhan-010/",
+    color: "#0077B5",
+  },
+  {
+    name: "GitHub",
+    icon: Github,
+    url: "https://github.com/Harryupthere",
+    color: "#181717",
+  },
+  // { name: 'Fiverr', icon: Briefcase, url: 'https://www.fiverr.com/harshchouhan001/', color: '#1DBF73' },
+  // { name: 'Freelancer', icon: Globe, url: 'https://www.freelancer.in/u/Harsh01119?sb=t', color: '#29B2FE' },
   // { name: 'Upwork', icon: Briefcase, url: 'https://upwork.com', color: '#6FDA44' },
   // { name: 'PeoplePerHour', icon: Clock, url: 'https://peopleperhour.com', color: '#FF6B00' },
   // { name: 'LeetCode', icon: Code, url: 'https://leetcode.com', color: '#FFA116' },
 ];
 
 const Contact = () => {
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -40,14 +59,30 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Message sent! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    sendEmail(formData);
+    toast.success("Message sent! I will get back to you soon.");
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+    const sendEmail = async (form) => {
+      try{
+    await emailjs.send(
+      "service_5m1gwy8",
+      "template_r7yhhg9",
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      },
+      "1tYmJQRi0ymUx_Jax",
+    );
+  }catch(error){console.log(error)}
   };
 
   return (
     <section id="contact" className="contact">
       <div className="contact__clouds"></div>
-      
+
       <div className="contact__container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -57,7 +92,9 @@ const Contact = () => {
           className="contact__header"
         >
           <h2 className="contact__title">Let's Connect in the Sky ☁️</h2>
-          <p className="contact__subtitle">Reach out and let's build something amazing together</p>
+          <p className="contact__subtitle">
+            Reach out and let's build something amazing together
+          </p>
         </motion.div>
 
         <div className="contact__content">
@@ -83,7 +120,9 @@ const Contact = () => {
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
                     viewport={{ once: true }}
                     className="contact__social-link"
-                    style={{ '--hover-color': link.color } as React.CSSProperties}
+                    style={
+                      { "--hover-color": link.color } as React.CSSProperties
+                    }
                   >
                     <Icon size={24} />
                     <span>{link.name}</span>
